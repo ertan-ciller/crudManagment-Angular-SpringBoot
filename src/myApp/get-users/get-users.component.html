@@ -1,0 +1,29 @@
+<p>get-users works!</p>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">kullanıcı Adı </th>
+                    <th scope="col">şifre</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    
+                    <th scope="row">{{user.id}}</th>
+                    <td>{{user.username}}</td> <!-- Angular Tanım yaparken Camel casing kabul etmiyor.-->
+                    <td>{{user.password}}</td>
+                    
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

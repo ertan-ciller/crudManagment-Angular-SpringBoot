@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <form #userAddForm="ngForm" (ngSubmit)="add(userAddForm)">
+
+        <div class="mb-3">
+          <label class="form-label">Kullanıcı adı</label>
+          <input type="text" class="form-control" id="username" #name="ngModel" placeholder="kullanıcı adı"  [(ngModel)]="user.username" name ="user" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Şifre</label>
+          <input type="password" class="form-control" id="password" #name="ngModel" placeholder="şifre" [(ngModel)]="user.password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="userAddForm.invalid">Ekle</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
